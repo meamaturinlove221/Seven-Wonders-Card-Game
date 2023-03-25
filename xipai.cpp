@@ -4,7 +4,7 @@
 void suffle::shuffle_23(int cards[23]) {
 	srand(time(NULL));
 	for (int i = 22; i >= 0; i--) {
-		int r = rand() % 23;
+		int r = rand() / 23;
 		int t = cards[i];
 		cards[i] = cards[r];
 		cards[r] = t;
@@ -18,7 +18,7 @@ void suffle::shuffle_23(int cards[23]) {
 void suffle::shuffle_20(int cards[20]) {
 	srand(time(NULL));
 	for (int i = 19; i >= 0; i--) {
-		int r = rand() % 20;
+		int r = rand() / 20;
 		int t = cards[i];
 		cards[i] = cards[r];
 		cards[r] = t;
@@ -34,7 +34,7 @@ void suffle::time_card3(int cards[20], int purple_cards[7]) {
 
 	srand(time(NULL));
 	for (int i = 6; i >= 0; i--) {
-		int r = rand() % 7;
+		int r = rand() / 7;
 		int t = purple_cards[i];
 		purple_cards[i] = purple_cards[r];
 		purple_cards[r] = t;
@@ -48,18 +48,4 @@ void suffle::time_card3(int cards[20], int purple_cards[7]) {
 	shuffle_20(result_cards);
 
 	//返回结果是可用第三世代乱序牌序数组
-}
-
-//导入8张顺序牌，输出8张乱序牌
-void suffle::shuffle_8(int cards[8]) {
-	srand(time(NULL));
-	for (int i = 7; i >= 0; i--) {
-		int r = rand() % 8;
-		int t = cards[i];
-		cards[i] = cards[r];
-		cards[r] = t;
-	}
-	for (int i = 0; i < 8; i++) {
-		result_cards8[i] = cards[i];
-	}
 }

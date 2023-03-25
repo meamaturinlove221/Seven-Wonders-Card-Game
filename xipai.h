@@ -5,14 +5,7 @@
 
 class suffle {
 public:
-	
 	int result_cards[20];
-	int result_cards8[8];
-
-	//suffle();
-
-	//导入12张顺序牌，输出12张乱序牌
-	void shuffle_8(int cards[8]);
 
 	//导入23张顺序牌，输出20张乱序牌
 	void shuffle_23(int cards[23]);
